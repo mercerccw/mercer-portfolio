@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  background-color: white;
 }
 
 .navbar {
@@ -32,10 +33,10 @@
 }
 @media (max-width: 601px) {
   html {
-    font-size: 15px;
+    font-size: 22px;
   }
   .top-logo {
-    width: 32px;
+    width: 43px;
     height: auto;
   }
 }
