@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import "./App.scss"
 import { About, Home, Projects } from "./components"
 import Navbar from "react-bootstrap/Navbar"
@@ -10,12 +10,12 @@ function App() {
   return (
     <Router>
       <Navbar collapseOnSelect expand="lg" className="navbar" sticky="top">
-        <Navbar.Brand><a href="/"><img className="top-logo" src={logo} alt="home" width="32" height="34"/></a></Navbar.Brand>
+        <Navbar.Brand><Link to="/"><img className="top-logo" src={logo} alt="home" width="32" height="34"/></Link></Navbar.Brand>
         <Navbar.Toggle className="navbar-toggle" aria-controls="responsive-navbar-nav"/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto" >
-            <Nav.Link className="link" href="/projects">Projects</Nav.Link>
-            <Nav.Link className="link" href="/about">About</Nav.Link>
+            <Nav.Link><Link className="link" to="/projects">Projects</Link></Nav.Link>
+            <Nav.Link><Link className="link" to="/about">About</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
