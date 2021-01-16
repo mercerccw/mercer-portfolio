@@ -24,3 +24,6 @@ yarn-error.log*
 
 *.css
 *.css.map
+
+.env
+debug.log
