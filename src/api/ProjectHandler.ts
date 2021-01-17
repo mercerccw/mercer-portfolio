@@ -1,5 +1,5 @@
 import { Project } from "../types/Project"
-import { IHttpClientRequestParameters } from "./IHttpClient"
+import { IHttpClientRequestParameters} from "./HttpClient"
 import { httpClient } from "./HttpClient"
 
 export class ProjectHandler {

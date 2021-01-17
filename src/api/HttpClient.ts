@@ -1,5 +1,13 @@
 import axios, { AxiosRequestConfig } from "axios"
-import { IHttpClient, IHttpClientRequestParameters } from "./IHttpClient"
+export interface IHttpClientRequestParameters<T> {
+  url: string
+  requiresToken: boolean
+  payload?: T
+}
+export interface IHttpClient {
+  get<T>(parameters: IHttpClientRequestParameters<any>): Promise<T>
+  post<T>(parameters: IHttpClientRequestParameters<any>): Promise<T>
+}
 
 export class HttpClient implements IHttpClient {
   get<T>(parameters: IHttpClientRequestParameters<any>): Promise<T> {
