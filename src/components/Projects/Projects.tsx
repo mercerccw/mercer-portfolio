@@ -1,12 +1,28 @@
-import React from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import "./Projects.scss"
 import Carousel from "react-bootstrap/cjs/Carousel"
 import mountain1 from "../../images/mountains-1.jpg"
 import mountain2 from "../../images/mountains-2.jpg"
 import mountain3 from "../../images/mountains-3.jpg"
+import { Project } from "../../types/Project"
+import { ProjectHandler } from "../../api"
+import _ from "lodash"
 
-export default function Projects() {
+export const Projects = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const projectHandler = new ProjectHandler()
+
+  useEffect(() => {
+    projectHandler.getProjects().then((projects) => {
+      setProjects(projects);
+    })
+  }, [])
+  _.each(projects, (project : Project) => {
+    console.log(project.name)
+  })
+
   return (
+    projects &&
     <section>
       <Carousel className="project-carousel">
         <Carousel.Item interval={2000} className="carousel-item">
