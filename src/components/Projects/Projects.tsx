@@ -36,33 +36,31 @@ export const Projects = () => {
                 </Carousel.Item>
               )
             }
-            return null;
+            return null
           })
         }
       </Carousel>
       <div className="projects-panel">
-        <h1>
-          Projects
-        </h1>
-        <ul className="card-deck">
+        {/*<h1>*/}
+        {/*  Projects*/}
+        {/*</h1>*/}
+        <hr />
+        <div className="projects">
           {
             projects.map((project) => {
               return (
-                <li>
-                  <SingleProject
-                    name={project.name}
-                    description={project.description}
-                    role={project.role}
-                    featured={project.featured}
-                    tools={project.tools}
-                    thumbnail={project.thumbnail}
-                    type={project.type} />
-                </li>
-
+                <SingleProject
+                  name={project.name}
+                  description={project.description}
+                  role={project.role}
+                  featured={project.featured}
+                  tools={project.tools}
+                  thumbnail={project.thumbnail}
+                  type={project.type} />
               )
             })
           }
-        </ul>
+        </div>
       </div>
     </section>
   )
