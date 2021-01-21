@@ -5,20 +5,17 @@ import { Project } from "../../types/Project"
 import { ProjectHandler } from "../../api"
 // import _ from "lodash"
 import { ProjectCard } from "../ProjectCard"
-import { Route, Switch, useParams, useRouteMatch, Link } from "react-router-dom"
-import { SingleProject } from "../SingleProject"
-import { Home } from "../Home"
+import { Link } from "react-router-dom"
+
 
 export const Projects = (props) => {
   const [projects, setProjects] = useState<Project[]>([])
-  const projectHandler = new ProjectHandler()
-  let { path, url } = useRouteMatch()
 
   useEffect(() => {
-    projectHandler.getProjects().then((projects) => {
+    ProjectHandler.getProjects().then((projects) => {
       setProjects(projects)
     })
-  }, [projectHandler])
+  },[])
 
   return (
     projects &&
@@ -28,7 +25,7 @@ export const Projects = (props) => {
           projects.map((project) => {
             if (project.featured) {
               return (
-                <Carousel.Item interval={2000} className="carousel-item">
+                <Carousel.Item interval={2000} className="carousel-item" key={project.id}>
                   <Link to={`/projects/${project.id}`}>
                     <img
                       className="d-block w-100"
