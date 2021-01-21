@@ -1,15 +1,26 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Project } from "../../types/Project"
+import { useParams } from "react-router-dom"
+import { ProjectHandler } from "../../api"
 
-export const SingleProject = (project: Project) => {
+export const SingleProject = () => {
+  const [project, setProject] = useState<Project>()
+  let { projectId } = useParams()
+
+  useEffect(() => {
+    ProjectHandler.getSingleProject(projectId).then((project) => {
+      console.log(project)
+      setProject(project)
+    })
+  }, [projectId])
+
   return (
-    <div className="card">
-      <img className="card-img-top" src={project.thumbnail} alt={project.name} />
-      <div className="card-body">
-        <h5 className="card-title">{project.name}</h5>
-        <p className="card-text">{project.type}</p>
-        {/*<a href="#" className="btn btn-primary">Go somewhere</a>*/}
-      </div>
-    </div>
+    <section>
+      {project &&
+      <div>
+        {project.name}
+      </div>}
+    </section>
+
   )
 }
