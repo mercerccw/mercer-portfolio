@@ -4,11 +4,15 @@ import Carousel from "react-bootstrap/cjs/Carousel"
 import { Project } from "../../types/Project"
 import { ProjectHandler } from "../../api"
 // import _ from "lodash"
+import { ProjectCard } from "../ProjectCard"
+import { Route, Switch, useParams, useRouteMatch, Link } from "react-router-dom"
 import { SingleProject } from "../SingleProject"
+import { Home } from "../Home"
 
-export const Projects = () => {
+export const Projects = (props) => {
   const [projects, setProjects] = useState<Project[]>([])
   const projectHandler = new ProjectHandler()
+  let { path, url } = useRouteMatch()
 
   useEffect(() => {
     projectHandler.getProjects().then((projects) => {
@@ -25,14 +29,16 @@ export const Projects = () => {
             if (project.featured) {
               return (
                 <Carousel.Item interval={2000} className="carousel-item">
-                  <img
-                    className="d-block w-100"
-                    src={project.thumbnail}
-                    alt={project.name}
-                  />
-                  <Carousel.Caption className="carousel-item-caption">
-                    <p>{project.name}</p>
-                  </Carousel.Caption>
+                  <Link to={`/projects/${project.id}`}>
+                    <img
+                      className="d-block w-100"
+                      src={project.thumbnail}
+                      alt={project.name}
+                    />
+                    <Carousel.Caption className="carousel-item-caption">
+                      <p>{project.name}</p>
+                    </Carousel.Caption>
+                  </Link>
                 </Carousel.Item>
               )
             }
@@ -41,26 +47,26 @@ export const Projects = () => {
         }
       </Carousel>
       <div className="projects-panel">
-        {/*<h1>*/}
-        {/*  Projects*/}
-        {/*</h1>*/}
         <hr />
-        <div className="projects">
+        <ul className="projects">
           {
             projects.map((project) => {
               return (
-                <SingleProject
-                  name={project.name}
-                  description={project.description}
-                  role={project.role}
-                  featured={project.featured}
-                  tools={project.tools}
-                  thumbnail={project.thumbnail}
-                  type={project.type} />
+                <li className="card project" key={project.id}>
+                  <ProjectCard id={project.id}
+                               name={project.name}
+                               description={project.description}
+                               role={project.role}
+                               featured={project.featured}
+                               tools={project.tools}
+                               thumbnail={project.thumbnail}
+                               type={project.type} />
+                </li>
+
               )
             })
           }
-        </div>
+        </ul>
       </div>
     </section>
   )

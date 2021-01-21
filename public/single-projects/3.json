@@ -1,0 +1,17 @@
+{
+  "id": 3,
+  "name": "Equipment Checkout System",
+  "description": "It's a project for checking things out",
+  "role": "Developer",
+  "type": "Website",
+  "featured": false,
+  "thumbnail": "https://i.pinimg.com/originals/2f/e8/05/2fe8053c01e6dbc40451832248df5e4f.jpg",
+  "tools": [
+    {
+      "name": "AngularJS"
+    },
+    {
+      "name": "SLIM"
+    }
+  ]
+}

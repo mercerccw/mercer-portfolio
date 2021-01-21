@@ -1,6 +1,7 @@
 import { Tool } from "./Tool"
 
 export interface Project {
+  id: number,
   name : string,
   description : string,
   role: string,

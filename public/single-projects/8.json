@@ -1,0 +1,14 @@
+{
+  "id": 8,
+  "name": "Remote Teaching Site",
+  "description": "A instructional website built to teach teachers how to run classes in the context of remote work.",
+  "role": "Developer",
+  "type": "Website",
+  "featured": false,
+  "thumbnail": "https://www.wallpapertip.com/wmimgs/3-30668_3840x2160-landscape-4k-ultra-hd-wallpaper-ultra-hd.jpg",
+  "tools": [
+    {
+      "name": "Wordpress"
+    }
+  ]
+}

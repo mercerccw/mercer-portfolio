@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Cardinal AR",
     "description": "An augmented reality app built in Unity3D.",
     "role": "Lead Developer",
@@ -13,6 +14,7 @@
     ]
   },
   {
+    "id": 2,
     "name": "Chirper App",
     "description": "An app for showing Ball State Cardinal Spirit",
     "role": "Developer",
@@ -26,6 +28,7 @@
     ]
   },
   {
+    "id": 3,
     "name": "Equipment Checkout System",
     "description": "It's a project for checking things out",
     "role": "Developer",
@@ -42,6 +45,7 @@
     ]
   },
   {
+    "id": 4,
     "name": "Immersive Learning Brochure",
     "description": "A promotional brochure made to market the Digital Corps",
     "role": "Project Manager",
@@ -51,6 +55,7 @@
     "tools": []
   },
   {
+    "id": 5,
     "name": "Life-Extend",
     "description": "A health and wellness tracking application build in React Native.",
     "role": "Developer",
@@ -70,6 +75,7 @@
     ]
   },
   {
+    "id": 6,
     "name": "Philosophy Outreach Site",
     "description": "A promotional website designed for the Ball State Philosoophy outreach program.",
     "role": "Developer",
@@ -83,6 +89,7 @@
     ]
   },
   {
+    "id": 7,
     "name": "Project Dashboard",
     "description": "A project management website designed to manage projects.",
     "role": "Developer",
@@ -102,6 +109,7 @@
     ]
   },
   {
+    "id": 8,
     "name": "Remote Teaching Site",
     "description": "A instructional website built to teach teachers how to run classes in the context of remote work.",
     "role": "Developer",
@@ -115,6 +123,7 @@
     ]
   },
   {
+    "id": 9,
     "name": "Trust Admin App",
     "description": "A trust account management app built using Microsft Xamarin",
     "role": "Developer",
@@ -128,6 +137,7 @@
     ]
   },
   {
+    "id": 10,
     "name": "Writing Challenge Site",
     "description": "A website meant for Ball State staff members to compete in logging consistent time spent writing.",
     "role": "Developer",

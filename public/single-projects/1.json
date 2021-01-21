@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "name": "Cardinal AR",
+  "description": "An augmented reality app built in Unity3D.",
+  "role": "Lead Developer",
+  "type": "iOS/Android app",
+  "featured": true,
+  "thumbnail": "https://wallpaperaccess.com/full/38580.jpg",
+  "tools": [
+    {
+      "name": "Unity3D"
+    }
+  ]
+}

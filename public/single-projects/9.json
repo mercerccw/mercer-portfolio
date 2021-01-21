@@ -1,0 +1,14 @@
+{
+  "id": 9,
+  "name": "Trust Admin App",
+  "description": "A trust account management app built using Microsft Xamarin",
+  "role": "Developer",
+  "type": "iOS/Android app",
+  "featured": true,
+  "thumbnail": "https://www.wallpapertip.com/wmimgs/3-30668_3840x2160-landscape-4k-ultra-hd-wallpaper-ultra-hd.jpg",
+  "tools": [
+    {
+      "name": "Xamarin"
+    }
+  ]
+}

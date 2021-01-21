@@ -11,5 +11,13 @@ export class ProjectHandler {
     }
     return httpClient.get<Project[]>(getParameters)
   }
+
+  getSingleProject(projectId : number): Promise<Project> {
+    const getParameters: IHttpClientRequestParameters<any> = {
+      url: `single-projects/${projectId}.json`,
+      requiresToken: false
+    }
+    return httpClient.get<Project>(getParameters)
+  }
 }
 

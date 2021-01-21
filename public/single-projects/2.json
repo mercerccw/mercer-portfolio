@@ -1,0 +1,14 @@
+{
+  "id": 2,
+  "name": "Chirper App",
+  "description": "An app for showing Ball State Cardinal Spirit",
+  "role": "Developer",
+  "type": "iOS/Android app",
+  "featured": false,
+  "thumbnail": "https://wallpaperaccess.com/full/38580.jpg",
+  "tools": [
+    {
+      "name": "React Native"
+    }
+  ]
+}
