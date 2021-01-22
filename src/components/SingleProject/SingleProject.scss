@@ -1,0 +1,15 @@
+.single-project {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: black solid 1px;
+  width: 70%;
+  height: 25vh;
+  padding: 0 0;
+  .hero-container {
+    width: 100%;
+    height: 100%;
+    //background-image: url("https://wallpaperaccess.com/full/38580.jpg");
+  }
+}

@@ -19,7 +19,7 @@ export const Projects = (props) => {
 
   return (
     projects &&
-    <section>
+    <section className="projects-container">
       <Carousel className="project-carousel">
         {
           projects.map((project) => {
