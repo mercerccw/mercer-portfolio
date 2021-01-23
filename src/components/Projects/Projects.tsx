@@ -6,6 +6,7 @@ import { ProjectHandler } from "../../api"
 // import _ from "lodash"
 import { ProjectCard } from "../ProjectCard"
 import { Link } from "react-router-dom"
+import { Footer } from "../Footer"
 
 
 export const Projects = (props) => {
@@ -57,7 +58,9 @@ export const Projects = (props) => {
                                featured={project.featured}
                                tools={project.tools}
                                thumbnail={project.thumbnail}
-                               type={project.type} />
+                               type={project.type}
+                               languages={project.languages}
+                               links={project.links} />
                 </li>
 
               )
