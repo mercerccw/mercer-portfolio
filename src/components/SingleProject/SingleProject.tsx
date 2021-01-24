@@ -80,11 +80,9 @@ export const SingleProject = () => {
                 </ul>
               </div>
             }
-
           </div>
         </section>
       }
     </section>
-
   )
 }
