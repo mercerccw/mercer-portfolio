@@ -3,6 +3,9 @@
 .App {
   text-align: center;
   background-color: white;
+  //min-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -12,6 +15,7 @@
 .link {
   text-decoration: none;
   color: white;
+  padding: 13px;
 }
 .link:hover {
   color: coral;
