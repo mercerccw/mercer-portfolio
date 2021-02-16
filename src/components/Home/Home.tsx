@@ -12,10 +12,7 @@ export const Home = () => {
   return (
     <section className="home">
 
-      <section className="title-card" style={{
-        backgroundImage: `url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/hero_image.jpeg")`,
-        backgroundSize: "cover"
-      }}>
+      <section className="title-card">
         <div className="title">
           <h1>Clayton Mercer</h1>
           <h2>Software Developer</h2>
@@ -28,10 +25,10 @@ export const Home = () => {
           marginRight: "auto",
           left: 0,
           right: 0,
-          bottom: 20,
+          bottom: "5%",
           textAlign: "center",
           zIndex: 1000,
-          marginTop: "-20%",
+          // marginTop: "-20%",
           position: "absolute",
           boxShadow: "3px 3px lightgray"
         }}>
@@ -49,9 +46,6 @@ export const Home = () => {
 
 
       <section id="main-content" className="main-content">
-        <div className="divider">
-          <span className="ribbon-divider"></span>
-        </div>
         <article className="content-image">
           <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illo laborum, minima nesciunt omnis

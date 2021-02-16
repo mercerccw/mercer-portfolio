@@ -1,17 +1,21 @@
 .home {
   height: 90vh;
 }
+
 .main-content {
   height: fit-content;
 }
+
 .title-card {
   height: 100%;
+  background: url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/hero_image.jpeg") no-repeat center center fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 
   &::after {
     content: "";
@@ -59,6 +63,7 @@
 .main-content {
   padding-top: 5%;
   background-color: ghostwhite;
+
   .divider {
     position: relative;
     margin-bottom: 10%;
