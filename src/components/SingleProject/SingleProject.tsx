@@ -3,19 +3,34 @@ import { Project } from "../../types/Project"
 import { useParams } from "react-router-dom"
 import { ProjectHandler } from "../../api"
 import "./SingleProject.scss"
+import loading from "../../images/loading.gif"
 
 export const SingleProject = () => {
   const [project, setProject] = useState<Project>()
+  const [isLoading, setIsLoading] = useState(true);
   let { projectId } = useParams()
 
   useEffect(() => {
     ProjectHandler.getSingleProject(projectId).then((project) => {
       setProject(project)
+      setIsLoading(false)
     })
   }, [projectId])
 
   return (
     <section className="single-project-container">
+      {
+        isLoading && <img src={loading} alt="" width="100px" style={{
+          marginLeft: "auto",
+          marginRight: "auto",
+          left: 0,
+          right: 0,
+          textAlign: "center",
+          zIndex: 1000,
+          position: "absolute",
+          marginTop: "20px"
+        }} />
+      }
       {
         project &&
         <section className="single-project">
