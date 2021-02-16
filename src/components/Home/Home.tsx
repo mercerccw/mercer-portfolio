@@ -13,37 +13,40 @@ export const Home = () => {
     <section className="home">
 
       <section className="title-card" style={{
-        backgroundImage: `url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/hero_image.jpeg")`
+        backgroundImage: `url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/hero_image.jpeg")`,
+        backgroundSize: "cover"
       }}>
         <div className="title">
           <h1>Clayton Mercer</h1>
           <h2>Software Developer</h2>
         </div>
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "50px",
+          width: "fit-content",
+          marginLeft: "auto",
+          marginRight: "auto",
+          left: 0,
+          right: 0,
+          bottom: 20,
+          textAlign: "center",
+          zIndex: 1000,
+          marginTop: "-20%",
+          position: "absolute",
+          boxShadow: "3px 3px lightgray"
+        }}>
+          <a href="#main-content">
+            <img src={arrow} alt="arrow" style={{
+              display: "flex",
+              justifyContent: "center",
+              textAlign: "center",
+              transform: "rotate(180deg)",
+              width: "2.5em"
+            }}/>
+          </a>
+        </div>
       </section>
-      <div style={{
-        backgroundColor: "white",
-        borderRadius: "50px",
-        width: "fit-content",
-        marginLeft: "auto",
-        marginRight: "auto",
-        left: 0,
-        right: 0,
-        textAlign: "center",
-        zIndex: 1000,
-        marginTop: "-60px",
-        position: "absolute",
-        boxShadow: "3px 3px lightgray"
-      }}>
-        <a href="#main-content">
-          <img src={arrow} alt="arrow" width="100px" style={{
-            display: "flex",
-            justifyContent: "center",
-            textAlign: "center",
-            transform: "rotate(180deg)",
-          }}/>
-        </a>
 
-      </div>
 
       <section id="main-content" className="main-content">
         <div className="divider">
