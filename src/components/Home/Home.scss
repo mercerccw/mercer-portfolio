@@ -1,5 +1,5 @@
 .home {
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-content {
@@ -19,7 +19,7 @@
 
   &::after {
     content: "";
-    height: 90%;
+    height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -28,7 +28,7 @@
 
   .title {
     color: white;
-
+    margin-top: -100px;
     justify-content: center;
     align-items: center;
     text-align: center;
