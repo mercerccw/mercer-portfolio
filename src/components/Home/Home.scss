@@ -5,9 +5,34 @@
 .main-content {
   height: fit-content;
 }
+#down-button {
+  background-color: white;
+  border-radius: 50px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 30%;
+  text-align: center;
+  z-index: 1000;
+  position: absolute;
+  box-shadow: 3px 3px lightgray;
+  a {
+    img {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      transform: rotate(180deg);
+      width: 2.5em;
+    }
+  }
+
+}
 
 .title-card {
   height: 100%;
+  position: relative;
   background: url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/hero_image.jpeg") no-repeat center center fixed;
   display: flex;
   align-items: center;
@@ -16,6 +41,10 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  top: -5%;
+  @media screen and (max-width: 800px){
+    background-attachment: scroll;
+  }
 
   &::after {
     content: "";
@@ -24,6 +53,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     left: 0;
+    top: 0;
   }
 
   .title {

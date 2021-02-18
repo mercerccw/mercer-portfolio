@@ -17,29 +17,9 @@ export const Home = () => {
           <h1>Clayton Mercer</h1>
           <h2>Software Developer</h2>
         </div>
-        <div style={{
-          backgroundColor: "white",
-          borderRadius: "50px",
-          width: "fit-content",
-          marginLeft: "auto",
-          marginRight: "auto",
-          left: 0,
-          right: 0,
-          bottom: "5%",
-          textAlign: "center",
-          zIndex: 1000,
-          // marginTop: "-20%",
-          position: "absolute",
-          boxShadow: "3px 3px lightgray"
-        }}>
+        <div id="down-button">
           <a href="#main-content">
-            <img src={arrow} alt="arrow" style={{
-              display: "flex",
-              justifyContent: "center",
-              textAlign: "center",
-              transform: "rotate(180deg)",
-              width: "2.5em"
-            }}/>
+            <img src={arrow} alt="arrow"/>
           </a>
         </div>
       </section>
