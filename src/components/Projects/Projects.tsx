@@ -48,7 +48,6 @@ export const Projects = (props) => {
           }
         </Carousel>
         <div className="projects-panel">
-          <hr />
           <ul className="projects">
             {
               projects.map((project) => {

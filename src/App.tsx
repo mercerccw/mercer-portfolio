@@ -7,7 +7,6 @@ import Nav from "react-bootstrap/cjs/Nav"
 import logo from "./images/white_logo.png"
 import { SingleProject } from "./components/SingleProject"
 import { ScrollToTop } from "./components/ScrollToTop"
-import { Footer } from "./components/Footer"
 
 function App() {
   return (
@@ -19,6 +18,7 @@ function App() {
           <Navbar.Toggle className="navbar-toggle" aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
+              <Link className="link" to="/">Home</Link>
               <Link className="link" to="/projects">Projects</Link>
               <Link className="link" to="/about">About</Link>
             </Nav>
