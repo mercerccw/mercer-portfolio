@@ -14,6 +14,7 @@ export const SingleProject = () => {
     ProjectHandler.getSingleProject(projectId).then((project) => {
       setProject(project)
       setIsLoading(false)
+      window.scrollTo(0, 0)
     })
   }, [projectId])
 
@@ -88,7 +89,7 @@ export const SingleProject = () => {
                   {
                     project.links.map((link) => {
                       return (
-                        <li key={link.name}><a href={link.link}>{link.name}</a></li>
+                        <li key={link.name}><a href={link.link}  target="_blank" rel="noopener noreferrer">{link.name}</a></li>
                       )
                     })
                   }

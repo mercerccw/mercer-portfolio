@@ -1,9 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./About.scss"
 import claytonProfilePic from "../../images/clayton-profile-pic.jpeg"
 import { Footer } from "../Footer"
 
 export const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="about">
       <section className="about-container">
