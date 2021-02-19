@@ -1,6 +1,4 @@
 .home {
-
-
   .title-card {
     height: 100vh;
     position: relative;
@@ -63,6 +61,10 @@
       }
 
     }
+    #down-button:hover {
+       transform: scale(1.1);
+     }
+
 
     @media screen and (max-width: 800px) {
       .title {
@@ -98,18 +100,22 @@
     @media screen and (max-width: 800px) {
       background-attachment: scroll;
     }
+
     .experience {
       max-width: 800px;
       background-color: rgba(255, 255, 255, .9);
       padding-bottom: 100px;
+
       .page-link {
         background-color: white;
         border-radius: 50px;
         width: fit-content;
         box-shadow: 3px 3px lightgray;
         margin: auto;
+
         .link {
           color: black;
+
           img {
             width: 30px;
             height: auto;
@@ -117,6 +123,10 @@
           }
         }
       }
+      .page-link:hover {
+        transform: scale(1.1);
+      }
+
       h1 {
         margin: 0;
         text-align: center;
