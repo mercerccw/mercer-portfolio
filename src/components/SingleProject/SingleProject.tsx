@@ -14,6 +14,7 @@ export const SingleProject = () => {
     ProjectHandler.getSingleProject(projectId).then((project) => {
       setProject(project)
       setIsLoading(false)
+      window.scrollTo(0, 0)
     })
   }, [projectId])
 

@@ -17,6 +17,7 @@ export const Projects = (props) => {
     ProjectHandler.getProjects().then((projects) => {
       setProjects(projects)
       setIsLoading(false)
+      window.scrollTo(0, 0)
     })
   }, [])
 
