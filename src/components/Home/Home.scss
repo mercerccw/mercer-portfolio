@@ -1,252 +1,199 @@
 .home {
-  height: 100vh;
-}
 
-.main-content {
-  height: fit-content;
-}
-#down-button {
-  background-color: white;
-  border-radius: 50px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 30%;
-  text-align: center;
-  z-index: 1000;
-  position: absolute;
-  box-shadow: 3px 3px lightgray;
-  a {
-    img {
-      display: flex;
+
+  .title-card {
+    height: 100vh;
+    position: relative;
+    background: url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/hero_image.jpeg") no-repeat center center fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    top: -5%;
+    @media screen and (max-width: 800px) {
+      background-attachment: scroll;
+    }
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .title {
+      color: white;
+      margin-top: -200px;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      transform: rotate(180deg);
-      width: 2.5em;
+      z-index: 1;
+      padding: 5px;
+    }
+
+    #down-button {
+      background-color: white;
+      border-radius: 50px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      bottom: 30%;
+      text-align: center;
+      z-index: 1000;
+      position: absolute;
+      box-shadow: 3px 3px lightgray;
+
+      a {
+        img {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          transform: rotate(180deg);
+          width: 2.5em;
+          height: auto;
+        }
+      }
+
+    }
+
+    @media screen and (max-width: 800px) {
+      .title {
+        h1 {
+          font-size: 5vh;
+        }
+
+        h2 {
+          font-size: 3vh;
+        }
+      }
+    }
+    @media screen and (min-width: 801px) {
+      .title {
+        h1 {
+          font-size: 4vh;
+        }
+
+        h2 {
+          font-size: 2vh;
+        }
+      }
     }
   }
 
-}
-
-.title-card {
-  height: 100%;
-  position: relative;
-  background: url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/hero_image.jpeg") no-repeat center center fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  top: -5%;
-  @media screen and (max-width: 800px){
-    background-attachment: scroll;
-  }
-
-  &::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .title {
-    color: white;
-    margin-top: -100px;
+  .home-content {
+    display: flex;
+    //margin-top: 10%;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
-    padding: 5px;
+    height: fit-content;
+    background: url("https://mercer-portfolio-assets.s3.us-east-2.amazonaws.com/home-background.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    @media screen and (max-width: 800px) {
+      background-attachment: scroll;
+    }
+    .experience {
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, .9);
+      padding-bottom: 100px;
+      .page-link {
+        background-color: white;
+        border-radius: 50px;
+        width: fit-content;
+        box-shadow: 3px 3px lightgray;
+        margin: auto;
+        .link {
+          color: black;
+          img {
+            width: 30px;
+            height: auto;
+            transform: rotate(90deg);
+          }
+        }
+      }
+      h1 {
+        margin: 0;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+      }
+
+      .row {
+        height: fit-content;
+        padding: 5%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .column {
+
+          h3 {
+            font-size: 1.5rem;
+          }
+        }
+
+        .logo-gallery {
+
+          padding: 20px;
+
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: calc(50% - 40px);;
+
+          img {
+            padding: 5px;
+            width: auto;
+            height: 100px;
+            margin: auto;
+          }
+        }
+      }
+    }
+
   }
 
   @media screen and (max-width: 800px) {
-    .title {
-      h1 {
-        font-size: 5vh;
-      }
-
-      h2 {
-        font-size: 3vh;
-      }
+    .home {
+      background-image: none;
     }
-  }
-  @media screen and (min-width: 801px) {
-    .title {
-      h1 {
-        font-size: 4vh;
-      }
-
-      h2 {
-        font-size: 2vh;
-      }
-    }
-  }
-}
-
-.main-content {
-  padding-top: 5%;
-  background-color: ghostwhite;
-
-  .divider {
-    position: relative;
-    margin-bottom: 10%;
-    width: auto;
-
-    h1 {
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      left: 50%;
-      top: -50%;
-      transform: translateX(-50%);
-      font-size: xx-large;
-    }
-
-    .ribbon-divider {
-      background-color: #005f5f;
-      width: 80%;
-      height: 2px;
-      justify-content: center;
-      align-items: center;
-      right: 50%;
-      margin-left: 10%;
-
-
-    }
-  }
-
-
-  .content-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-right: 5%;
-    padding-left: 5%;
-    padding-bottom: 5%;
-    margin-bottom: 50px;
-
-    div {
-      padding-right: 5%;
-      padding-left: 5%;
-
-      p {
-        font-size: 20px;
-      }
-    }
-
-    img {
-      width: auto;
-      max-height: 100%;
-      border-radius: 10px;
-      border: #005f5f solid 5px;
-    }
-  }
-
-  .content-image-mobile {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-
-    .background-image {
-      position: relative;
-
-      img {
-        width: 50%;
-        border-radius: 10px;
-        border: #005f5f solid 10px;
-      }
-
-      .ribbon {
-        background-color: #005f5f;
-        width: 100%;
-        height: 60px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: -1;
-      }
-
-      z-index: 0;
+    .home-content {
+      margin-top: 0;
       width: 100%;
-    }
+      height: fit-content;
 
-    .content {
-      padding: 5% 10%;
-      background-color: ghostwhite;
-      margin: 5%;
-      border-radius: 10px;
+      .row {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: fit-content;
 
-      p {
-        text-align: justify;
+        .column {
 
+        }
+
+        #logo-gallery {
+          background-color: white;
+          border-radius: 20px;
+          padding: 20px;
+          box-shadow: 10px 10px gray;
+          width: fit-content;
+          height: fit-content;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 1439px) {
-  .main-content {
-    margin: auto;
 
-    .content-image {
-      display: none;
-    }
 
-    .ribbon-divider {
-      display: none;
-    }
-
-    .content-image-mobile {
-      display: block;
-    }
-
-  }
-}
-
-@media screen and (min-width: 814px) {
-  .main-content {
-
-    .content-image {
-      display: flex;
-    }
-
-    .ribbon-divider {
-      display: flex;
-    }
-
-    .content-image-mobile {
-      display: none;
-    }
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .main-content {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .main-content {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-}
-
-@media screen and (min-width: 2300px) {
-  .main-content {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-}
