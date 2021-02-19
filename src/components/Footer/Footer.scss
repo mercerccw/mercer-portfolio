@@ -26,7 +26,14 @@ footer {
           padding: 5px;
           width: 100px;
           height: auto;
+          @media screen and (max-width: 800px) {
+            width: 50px;
+          }
         }
+        img:hover {
+          transform: scale(1.2);
+        }
+
       }
     }
   }
